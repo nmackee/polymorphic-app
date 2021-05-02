@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Body:</strong>
+  <%= @book.body %>
+</p>
+<%# <%= render partial: "comments/comments", locals: {commentable: @book} %> %>
+<%= render partial: "comments/form", locals: {commentable: @book} %>
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
